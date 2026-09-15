@@ -1,0 +1,3 @@
+#pragma\s+once|#ifndef\s+\w+ || hero.h needs an include guard (#pragma once is fine)
+Hero::takeDamage || define the methods in hero.cpp using Hero::takeDamage, not inside the class body
+Hero::Hero || the constructor is defined as Hero::Hero in hero.cpp

@@ -1,0 +1,16 @@
+you light the torch in the hall
+-- the horde --
+goblin: yip!
+ogre: GRAAA
+wraith: (silence)
+-- you answer --
+goblin takes 15 (hp 0)
+ogre takes 15 (hp 15)
+wraith takes 15 (hp 0)
+-- the dead are cleared --
+  goblin dissolves
+  wraith dissolves
+survivors: 1
+-- you leave --
+  ogre dissolves
+the torch gutters out in the hall

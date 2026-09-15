@@ -1,0 +1,21 @@
+-- THE DUNGEON OF THE NULL POINTER --
+w a s d to move, i for your pack, p to drink, q to leave
+####################
+#@...#........#....#
+#....#..####..#..!.#
+#....#..#..#..#....#
+#.####..#..#..####.#
+#...g#..#..#.......#
+#.$..#..#.##..####.#
+#....#........#..#.#
+#.####.########..#.#
+#......#kg.......#.#
+#.####........O...>#
+####################
+hp 30/30   gold 0   steps 0   monsters alive 3
+you have no potions.
+-- pack (0/6) --
+(empty)
+gold: 0
+you climb back out.
+steps taken: 0

@@ -1,0 +1,15 @@
+{
+  "title": "First Steps",
+  "act": "ACT VI - Your Own Game",
+  "tagline": "a loop, a keypress, a world that answers",
+  "xp": 160,
+  "boss": false,
+  "concepts": ["game loop", "input dispatch", "collision", "state"],
+  "hints": [
+    "The loop is `while (std::getline(std::cin, cmd))`. When getline finally fails the input has run out - that is your 'quiet' ending.",
+    "Work out the target square FIRST, into `nx` and `ny`, then ask `d.isWall(nx, ny)` once. Do not write four copies of the wall check.",
+    "Up is `ny = py - 1`, because row 0 is the top. Down is `+1`. This trips everyone once.",
+    "Only count a step when the move actually happened. A bump into a wall is not a step.",
+    "Print the message BEFORE you render, and only render when the player moved. Blocked moves print a line and nothing else."
+  ]
+}

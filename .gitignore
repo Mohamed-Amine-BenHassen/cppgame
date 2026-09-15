@@ -1,0 +1,15 @@
+# mobile web build
+mobile/node_modules/
+mobile/dist/
+mobile/public/wasm-clang/
+mobile/*.partial
+
+# local play progress/state (machine-specific)
+.state/
+
+# per-floor compiled build output
+.build/
+
+# stray local artifacts
+nul
+tcxt

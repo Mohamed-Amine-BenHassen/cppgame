@@ -1,0 +1,11 @@
+-- the room --
+goblin  hp 12  atk 3
+ogre  hp 30  atk 7
+you swing at the goblin for 9
+goblin  hp 3  atk 3
+goblin alive: yes
+you swing at the goblin for 9
+goblin  hp 0  atk 3
+goblin alive: no
+the ogre turns to face you
+ogre  hp 30  atk 7

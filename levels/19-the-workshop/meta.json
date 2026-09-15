@@ -1,0 +1,15 @@
+{
+  "title": "The Workshop",
+  "act": "ACT V - The Deep Craft",
+  "tagline": "one file per idea",
+  "xp": 130,
+  "boss": false,
+  "concepts": ["headers", "#pragma once", "declaration vs definition", "Class::method"],
+  "hints": [
+    "Copy the shape of dice.h and dice.cpp - they are the same lesson, already finished, sitting right next to you.",
+    "hero.h holds the class with method SIGNATURES only, each ending in a semicolon: `void takeDamage(int amount);` - no body, no braces.",
+    "hero.cpp starts with `#include \"hero.h\"` and then defines each method with its full name: `void Hero::takeDamage(int amount) { ... }`",
+    "The constructor is `Hero::Hero(std::string name, int maxHp) { ... }` - the class name twice, because the constructor's own name IS the class name.",
+    "A const method keeps its const in BOTH places: `bool isAlive() const;` in the header and `bool Hero::isAlive() const { ... }` in the .cpp. Drop it in one and the linker will tell you nothing useful."
+  ]
+}

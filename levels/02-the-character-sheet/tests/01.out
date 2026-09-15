@@ -1,0 +1,8 @@
+-- CHARACTER SHEET --
+name: Kaelen
+class: R
+health: 100
+gold: 42
+attack: 13
+crit: 0.15
+alive: 1

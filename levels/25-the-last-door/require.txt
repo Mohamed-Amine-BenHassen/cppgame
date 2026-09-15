@@ -1,0 +1,8 @@
+Game::checkExit || implement checkExit - the door is the point of the game
+Game::save || implement save
+Game::load || implement load
+ofstream || write the save with std::ofstream
+ifstream || read it back with std::ifstream
+Monster::setHp || monsters need setHp so a loaded game restores their wounds
+Pack::items || pack.cpp needs items() so the save can list them
+iron key || the door wants the iron key

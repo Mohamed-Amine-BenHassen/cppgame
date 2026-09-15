@@ -1,0 +1,15 @@
+{
+  "title": "The Bestiary",
+  "act": "ACT V - The Deep Craft",
+  "tagline": "look things up by name, not by searching",
+  "xp": 120,
+  "boss": false,
+  "concepts": ["std::map", "operator[]", "find", "count", "iterating pairs"],
+  "hints": [
+    "`#include <map>`, then `std::map<std::string, int> hoard;`. Counting is the one place `hoard[name]++` is exactly right - a missing key is created as 0 first, which is what you want here.",
+    "Iterating: `for (const auto& entry : hoard)` gives you pairs. `entry.first` is the key, `entry.second` is the value. C++17 lets you write `for (const auto& [name, count] : hoard)` instead, which reads far better.",
+    "A std::map is always sorted by key, so the alphabetical order is free - do not sort anything yourself.",
+    "For the LOOKUP use `find`: `auto it = hoard.find(\"gold coin\");` then `if (it == hoard.end())` means not present. Using `hoard[\"gold coin\"]` here would silently INSERT it and change your distinct count.",
+    "`distinct` is `hoard.size()`. `total` is the sum of every `.second`."
+  ]
+}

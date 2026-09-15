@@ -1,0 +1,15 @@
+-- the horde --
+goblin: yip!
+ogre: GRAAA
+wraith: (silence)
+-- they strike --
+goblin strikes for 5
+ogre strikes for 6
+wraith strikes for 2
+-- you answer --
+goblin takes 15 (hp 0)
+  goblin is gone
+ogre takes 15 (hp 15)
+wraith takes 15 (hp 0)
+  wraith is gone
+survivors: 1

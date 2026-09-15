@@ -1,0 +1,14 @@
+-- pack (0/3) --
+(empty)
+add torch -> yes
+add rope -> yes
+add rations -> yes
+add lantern -> no
+-- pack (3/3) --
+torch, rope, rations
+has rope: yes
+drop rope -> yes
+drop rope -> no
+has rope: no
+-- pack (2/3) --
+torch, rations

@@ -1,0 +1,15 @@
+{
+  "title": "Spells as Functions",
+  "act": "ACT III - The Toolsmith",
+  "tagline": "name a piece of work and reuse it",
+  "xp": 80,
+  "boss": false,
+  "concepts": ["functions", "parameters", "return", "void", "scope"],
+  "hints": [
+    "A function is `returnType name(parameters) { ... }`. `int attackDamage(int strength)` means: give me an int called strength, I give you an int back.",
+    "Every path through a non-void function must `return` a value. `void` functions return nothing and just end.",
+    "Functions must appear ABOVE the place that calls them, so put all three between `roll()` and `main()`.",
+    "The bar maths: `int filled = hp * 10 / maxHp;` - and guard it, because a dead monster on negative hp would give you a negative count. `if (hp <= 0) filled = 0;`",
+    "To repeat a character, loop: `for (int i = 0; i < filled; ++i) std::cout << '#';` then a second loop printing `.` for the remaining `10 - filled`."
+  ]
+}

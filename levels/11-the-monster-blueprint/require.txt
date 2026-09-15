@@ -1,0 +1,3 @@
+struct\s+Monster || declare a struct called Monster
+const\s+Monster\s*& || describe and alive should take a const Monster& - look, do not touch
+void\s+wound\s*\(\s*Monster\s*& || wound needs a non-const Monster& so it can actually change it

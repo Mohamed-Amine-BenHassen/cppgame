@@ -1,0 +1,3 @@
+std::vector\s*<|vector\s*<\s*std::string || store the items in a std::vector
+push_back || add items with push_back
+\.size\(\) || ask the vector how many items it holds

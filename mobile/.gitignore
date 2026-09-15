@@ -1,0 +1,5 @@
+node_modules/
+dist/
+# 58 MB of upstream binaries - run `npm run setup` to fetch them
+public/wasm-clang/
+*.partial

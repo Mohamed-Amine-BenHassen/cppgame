@@ -1,0 +1,14 @@
+{
+  "title": "Naming the Hero",
+  "act": "ACT I - The Foundation",
+  "tagline": "let the player talk back",
+  "xp": 50,
+  "boss": false,
+  "concepts": ["std::cin", "std::getline", "reading numbers"],
+  "hints": [
+    "`std::getline(std::cin, name);` reads a WHOLE line, spaces included, into a std::string.",
+    "`std::cin >> level;` reads one value. The arrows point the other way from `cout` - data flows out of cin and into your variable.",
+    "The order matters here: read the name with getline FIRST, then the number with `>>`. Doing it the other way round has a famous trap you will meet on floor 13.",
+    "maxHealth is `80 + level * 20` and nextXp is `level * 100`. Let the program do the multiplying."
+  ]
+}

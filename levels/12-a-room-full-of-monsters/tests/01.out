@@ -1,0 +1,12 @@
+-- ROOM (3 monsters) --
+goblin  hp 12  atk 3
+ogre  hp 30  atk 7
+rat  hp 4  atk 1
+total threat: 11
+toughest: ogre
+-- you sweep the room --
+you hit goblin for 7 (hp 5)
+you hit ogre for 6 (hp 24)
+you hit rat for 7 (hp 0)
+  rat dies
+still standing: 2

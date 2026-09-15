@@ -1,0 +1,3 @@
+Pack::add || implement the Pack methods out of line in pack.cpp
+setTile || take the loot off the map with setTile, or you can farm it forever
+Pack\s+pack_|pack_ || the Game should own a Pack member

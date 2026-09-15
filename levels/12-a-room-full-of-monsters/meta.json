@@ -1,0 +1,15 @@
+{
+  "title": "A Room Full of Monsters",
+  "act": "ACT III - The Toolsmith",
+  "tagline": "the third boss - vectors of structs, changed in place",
+  "xp": 140,
+  "boss": true,
+  "concepts": ["vector of struct", "range-for by reference", "search", "accumulate"],
+  "hints": [
+    "Read three fields at once: `while (std::cin >> name)` then `if (name == \"done\") break;` then `std::cin >> hp >> atk;`. Build a Monster and push_back it.",
+    "`for (Monster& m : room)` gives you the REAL monsters. `for (Monster m : room)` gives you copies, and your damage vanishes - floor 10 again, in disguise.",
+    "Toughest = most hp. Track the index of the best so far, and only replace it when you find something STRICTLY greater, so ties keep the first one.",
+    "Sweep and survivor count are two separate passes. Do the whole sweep first, printing as you go, then walk the vector again and count the living.",
+    "The death line is two spaces, the name, then ` dies` - printed right after the hit that did it, inside the same loop pass."
+  ]
+}

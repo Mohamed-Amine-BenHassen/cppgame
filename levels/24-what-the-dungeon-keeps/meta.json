@@ -1,0 +1,15 @@
+{
+  "title": "What the Dungeon Keeps",
+  "act": "ACT VI - Your Own Game",
+  "tagline": "gold, potions, and a pack you have written before",
+  "xp": 180,
+  "boss": false,
+  "concepts": ["reuse", "mutating the world", "turn cost as design", "composition"],
+  "hints": [
+    "pack.cpp is floor 15's Pack, moved out of line. Copy your own answer from there and put `Pack::` on the front of every method.",
+    "Pickups happen AFTER the move commits, inside step(), while px_/py_ are already the new square. Ask `dungeon_.tileAt(px_, py_)` and switch on what you find.",
+    "`dungeon_.setTile(px_, py_, '.')` is what stops you picking the same coin up forever. For the potion, only clear the tile when the pack actually took it.",
+    "`i` and a refused drink cost no turn: print and `continue` before any monster gets to act. A successful drink IS a turn - monsters act, and the map is drawn.",
+    "Roll exactly once per event, in the order the brief lists, or the dice will drift: gold is roll(20) + 10, a potion heals roll(8) + 8."
+  ]
+}

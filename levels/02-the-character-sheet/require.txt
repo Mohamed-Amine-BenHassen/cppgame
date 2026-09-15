@@ -1,0 +1,4 @@
+(std::)?string\s+\w+ || use a std::string variable for the name
+char\s+\w+\s*= || use a char variable for the class letter
+double\s+\w+\s*= || use a double variable for the crit chance
+bool\s+\w+\s*= || use a bool variable for alive

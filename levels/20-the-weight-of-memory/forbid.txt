@@ -1,0 +1,2 @@
+\bnew\s+[A-Z] || no raw new on this floor - make_unique replaces it
+\bdelete\b || no delete either. That is the point: you cannot forget what you never wrote.

@@ -1,0 +1,2 @@
+ofstream || write the save file with std::ofstream
+ifstream || read it back with std::ifstream

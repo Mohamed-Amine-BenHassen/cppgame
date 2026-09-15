@@ -1,0 +1,15 @@
+{
+  "title": "The Fork in the Road",
+  "act": "ACT I - The Foundation",
+  "tagline": "the first boss - make the program choose",
+  "xp": 90,
+  "boss": true,
+  "concepts": ["if", "else if", "else", "comparison", "&&", "||", "!"],
+  "hints": [
+    "`if (hp < 30) { ... } else if (hp < 70) { ... } else { ... }` - the FIRST matching branch wins and the rest are skipped. That is why order matters.",
+    "`==` compares, `=` assigns. `if (hp = 0)` compiles and ruins your day. Comparison is always the doubled one.",
+    "`&&` is and, `||` is or. `if (hp < 30 && potions > 0)` means both must be true.",
+    "You wrote the status chain already - do the action as a SECOND, separate if/else chain below it. Two questions, two chains.",
+    "Order the action chain exactly as the brief lists it: dead first, then low-health cases, then the key, then the fallback. Put the key check first and a dying hero will walk through a door instead of drinking."
+  ]
+}

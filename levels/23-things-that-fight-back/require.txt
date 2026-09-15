@@ -1,0 +1,5 @@
+class\s+Goblin\s*:\s*public\s+Monster || Goblin must inherit from Monster
+unique_ptr\s*<\s*Monster\s*> || the game owns its monsters through unique_ptr
+make_unique || build the monsters with make_unique
+nullptr || monsterAt should return nullptr when the square is empty
+Game::run || implement Game::run in game.cpp

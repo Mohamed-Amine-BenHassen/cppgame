@@ -1,0 +1,3 @@
+int\s+attackDamage\s*\( || write a function called attackDamage that returns an int
+bool\s+isDead\s*\( || write a function called isDead that returns a bool
+void\s+showBar\s*\( || write a void function called showBar

@@ -1,0 +1,8 @@
+-- ROOM (1 monsters) --
+rat  hp 4  atk 1
+total threat: 1
+toughest: rat
+-- you sweep the room --
+you hit rat for 7 (hp 0)
+  rat dies
+still standing: 0

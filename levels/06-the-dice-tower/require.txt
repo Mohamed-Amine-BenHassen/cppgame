@@ -1,0 +1,2 @@
+for\s*\( || this floor is about the for loop - use one
+rngState\s*\*\s*1103515245u || leave the gifted roll() function exactly as it is

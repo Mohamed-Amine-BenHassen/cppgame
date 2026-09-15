@@ -1,0 +1,3 @@
+\b100\b || the final health (100) must be calculated, not typed in
+\b42\b || the final gold (42) must be calculated, not typed in
+\b13\b || the attack damage (13) must be calculated from strength

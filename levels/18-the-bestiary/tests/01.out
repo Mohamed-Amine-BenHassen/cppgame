@@ -1,0 +1,8 @@
+-- hoard --
+  bat x2
+  gold coin x1
+  rat x3
+distinct: 3
+total: 6
+rat: 3
+gold coin: 1

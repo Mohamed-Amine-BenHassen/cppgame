@@ -1,0 +1,4 @@
+class\s+Pack || declare a class called Pack
+private\s*: || the vector and the capacity belong in private
+size_t\s+size\s*\(\s*\)\s*const|std::size_t\s+size\s*\(\s*\)\s*const || size() must be const
+void\s+report\s*\(\s*const\s+Pack\s*& || report must take a const Pack& - that is what forces the const methods

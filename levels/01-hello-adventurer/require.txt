@@ -1,0 +1,1 @@
+cout || your program has to print with std::cout

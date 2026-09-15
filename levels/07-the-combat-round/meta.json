@@ -1,0 +1,15 @@
+{
+  "title": "The Combat Round",
+  "act": "ACT II - The Loops",
+  "tagline": "a real fight, decided by real dice",
+  "xp": 70,
+  "boss": false,
+  "concepts": ["loop + condition", "break", "turn order", "state"],
+  "hints": [
+    "`while (heroHp > 0 && goblinHp > 0)` reads exactly like the rule: keep fighting while both are standing.",
+    "Inside the round: the hero swings first. If that kills the goblin you must `break` immediately, or a corpse gets a free hit on you.",
+    "Round numbering: declare `int round = 0;` above the loop and `++round;` as the first thing inside.",
+    "Damage is `roll(6) + 2` for the hero and `roll(4) + 1` for the goblin. Roll once per swing and store it - you print it AND subtract it.",
+    "After the loop, decide the winner from `heroHp > 0`. Health can go negative; print it as it is, do not clamp it."
+  ]
+}

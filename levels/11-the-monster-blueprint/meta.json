@@ -1,0 +1,15 @@
+{
+  "title": "The Monster Blueprint",
+  "act": "ACT III - The Toolsmith",
+  "tagline": "one name for a bundle of facts",
+  "xp": 90,
+  "boss": false,
+  "concepts": ["struct", "members", "dot access", "struct parameters"],
+  "hints": [
+    "A struct is declared once, above your functions: `struct Monster { std::string name; int hp; int attack; };` - and yes, that semicolon after the closing brace is required.",
+    "Make one with braces in declaration order: `Monster goblin{\"goblin\", 12, 3};` - name, then hp, then attack.",
+    "Reach inside with a dot: `goblin.hp -= 5;`",
+    "`const Monster& m` for functions that only look. `Monster& m` for `wound`, which has to change the caller's monster - the same reference lesson as floor 10, now on a bigger box.",
+    "`describe` prints `<name>  hp <hp>  atk <attack>` with TWO spaces before hp and before atk."
+  ]
+}

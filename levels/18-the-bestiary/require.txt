@@ -1,0 +1,2 @@
+(std::)?map\s*<|unordered_map\s*< || store the hoard in a std::map
+\.find\s*\( || use find for the lookups, not operator[]

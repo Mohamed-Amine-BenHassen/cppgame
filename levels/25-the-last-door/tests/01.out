@@ -1,0 +1,18 @@
+-- THE DUNGEON OF THE NULL POINTER --
+w a s d to move, i pack, p potion, ? help, q leave
+####################
+#@...#........#....#
+#....#..####..#..!.#
+#....#..#..#..#....#
+#.####..#..#..####.#
+#...g#..#..#.......#
+#.$..#..#.##..####.#
+#....#........#..#.#
+#.####.########..#.#
+#......#kg.......#.#
+#.####........O...>#
+####################
+hp 30/30   gold 0   steps 0   monsters alive 3
+no save file found.
+you climb back out.
+steps taken: 0

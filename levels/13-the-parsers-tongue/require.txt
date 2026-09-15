@@ -1,0 +1,3 @@
+\.find\s*\( || find the space with std::string::find
+substr || cut the line apart with substr
+npos || you need std::string::npos to handle a line with no space in it

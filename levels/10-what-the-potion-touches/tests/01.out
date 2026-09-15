@@ -1,0 +1,8 @@
+hp 20
+brokenHeal 30 -> hp 20
+heal 30 -> hp 50
+heal 30 -> hp 60
+wound 80 -> hp 0
+gold 30
+buy rope for 10 -> yes, gold 20
+buy sword for 50 -> no, gold 20

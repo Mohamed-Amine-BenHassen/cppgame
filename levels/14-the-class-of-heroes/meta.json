@@ -1,0 +1,15 @@
+{
+  "title": "The Class of Heroes",
+  "act": "ACT IV - The Architect",
+  "tagline": "data that knows how to look after itself",
+  "xp": 110,
+  "boss": false,
+  "concepts": ["class", "public/private", "constructor", "member functions", "const methods"],
+  "hints": [
+    "A class body is `class Hero { public: ... private: ... };` - semicolon after the closing brace, exactly like a struct.",
+    "The constructor has the same name as the class and no return type: `Hero(std::string name, int maxHp) { ... }`. It runs when the object is made.",
+    "Trailing underscores (`hp_`, `name_`) are a common way to tell a member apart from a parameter with the same meaning. Nothing magic - just a habit that saves confusion.",
+    "`bool isAlive() const` - the `const` after the parentheses promises this method changes nothing. Put it on every method that only reads, and the compiler will catch you if you lie.",
+    "`status()` builds a string rather than printing one. Use `std::to_string(hp_)` to turn a number into text, and `+` to glue pieces together."
+  ]
+}

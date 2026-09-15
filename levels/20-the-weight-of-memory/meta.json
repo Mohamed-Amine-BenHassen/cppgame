@@ -1,0 +1,16 @@
+{
+  "title": "The Weight of Memory",
+  "act": "ACT V - The Deep Craft",
+  "tagline": "the fifth boss - cleanup you cannot forget",
+  "xp": 190,
+  "boss": true,
+  "concepts": ["RAII", "destructors", "unique_ptr", "make_unique", "std::move"],
+  "hints": [
+    "`#include <memory>` for unique_ptr and make_unique, `#include <utility>` for std::move.",
+    "`horde.push_back(std::make_unique<Goblin>());` - make_unique builds it and hands the vector sole ownership. There is no `new` anywhere on this floor.",
+    "Loop with `for (const auto& m : horde)` when reading and `for (auto& m : horde)` when changing. A plain `auto m` would try to COPY a unique_ptr, which is forbidden on purpose - copying it would mean two owners.",
+    "`survivors.push_back(std::move(m));` hands ownership over. Afterwards `m` is empty - that is the point, there is only ever one owner.",
+    "`m.reset();` destroys what a unique_ptr holds, right now. On a pointer whose contents were already moved away it does nothing at all - which is exactly why the survivors do not dissolve in that loop.",
+    "Torch is pure RAII: a constructor that prints, a destructor that prints, nothing else. Declare it FIRST in main so it is destroyed LAST."
+  ]
+}

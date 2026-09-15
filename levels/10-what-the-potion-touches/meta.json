@@ -1,0 +1,15 @@
+{
+  "title": "What the Potion Touches",
+  "act": "ACT III - The Toolsmith",
+  "tagline": "references, and why your heal did nothing",
+  "xp": 80,
+  "boss": false,
+  "concepts": ["pass by value", "pass by reference", "&", "const&"],
+  "hints": [
+    "`int& hp` in the parameter list means hp IS the caller's variable, not a copy of it. Drop the `&` and every change you make evaporates at the closing brace.",
+    "`brokenHeal` is meant to be useless - write it taking `int hp` (no ampersand), add to it, and watch nothing happen. That is the lesson, not a bug.",
+    "`heal` must not overshoot: add the amount, then `if (hp > maxHp) hp = maxHp;`",
+    "`wound` must not go below zero: subtract, then `if (hp < 0) hp = 0;`",
+    "`tryBuy` does two things - it changes gold AND answers yes or no. Only subtract when the purchase actually succeeds, then `return true;`."
+  ]
+}

@@ -1,0 +1,4 @@
+unique_ptr || own the monsters with std::unique_ptr
+make_unique || build them with std::make_unique
+std::move || hand ownership over with std::move
+~Torch || Torch needs a destructor - that is the whole demonstration

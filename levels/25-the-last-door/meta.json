@@ -1,0 +1,16 @@
+{
+  "title": "The Last Door",
+  "act": "ACT VI - Your Own Game",
+  "tagline": "the final boss - a locked door, a save file, and an ending",
+  "xp": 460,
+  "boss": true,
+  "concepts": ["win and lose states", "serialisation", "round-tripping state", "finishing"],
+  "hints": [
+    "checkExit() runs after pickUp(), while px_/py_ are the square just entered. `if (dungeon_.tileAt(px_, py_) != '>') return;` and then branch on `pack_.has(\"iron key\")`.",
+    "Save the terrain with tileAt and restore it with setTile - those two functions are exactly inverse, which is why saving works at all.",
+    "Order in the file must match order in the reader, exactly. Write it once, read it once, and keep the two functions next to each other so you can see both at the same time.",
+    "After reading the last number with `>>`, call `in.ignore(10000, '\n')` before any getline. Floor 13, floor 17, and now here - it never stops being true.",
+    "`pack_ = Pack(6);` empties the pack before loading items into it. Without that, loading twice gives you two of everything.",
+    "save, load, i and ? are all free actions. Only moving, attacking and drinking cost a turn."
+  ]
+}

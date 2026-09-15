@@ -1,0 +1,25 @@
+-- THE DUNGEON OF THE NULL POINTER --
+w a s d to move, i pack, p potion, ? help, q leave
+####################
+#@...#........#....#
+#....#..####..#..!.#
+#....#..#..#..#....#
+#.####..#..#..####.#
+#...g#..#..#.......#
+#.$..#..#.##..####.#
+#....#........#..#.#
+#.####.########..#.#
+#......#kg.......#.#
+#.####........O...>#
+####################
+hp 30/30   gold 0   steps 0   monsters alive 3
+-- commands --
+w a s d   move, or attack whatever you walk into
+i         look in your pack
+p         drink a potion
+save      write dungeon.sav
+load      read dungeon.sav
+?         this list
+q         give up
+you climb back out.
+steps taken: 0

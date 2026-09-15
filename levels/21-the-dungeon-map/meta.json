@@ -1,0 +1,15 @@
+{
+  "title": "The Dungeon Map",
+  "act": "ACT VI - Your Own Game",
+  "tagline": "the capstone begins - a world made of characters",
+  "xp": 150,
+  "boss": false,
+  "concepts": ["2D grid", "vector<string>", "bounds checking", "rendering"],
+  "hints": [
+    "The map is a `std::vector<std::string>`. `rows_[y][x]` is the character at column x, row y - y FIRST, because y picks the string and x picks the character in it.",
+    "In the constructor, build rows_ then scan every tile for '@'. When you find it, save x and y into startX_/startY_ and overwrite that tile with '.', so the map itself holds no player.",
+    "`tileAt` must check bounds BEFORE indexing: `if (x < 0 || y < 0 || x >= width() || y >= height()) return '#';` Treating outside-the-map as solid rock means nothing else ever has to worry about it.",
+    "`height()` is `rows_.size()`, `width()` is `rows_[0].size()`. Both return int here, so cast: `return (int)rows_.size();`",
+    "`render` prints each row character by character, except that when x and y match the player it prints '@' instead. Do not modify rows_ to draw the player - draw over it."
+  ]
+}

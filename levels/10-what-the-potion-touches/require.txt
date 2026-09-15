@@ -1,0 +1,4 @@
+void\s+brokenHeal\s*\(\s*int\s+hp || brokenHeal must take hp BY VALUE (no ampersand) - that is the point
+void\s+heal\s*\(\s*int\s*&|void\s+heal\s*\(\s*int&\s* || heal must take hp by reference (int& hp)
+void\s+wound\s*\(\s*int\s*& || wound must take hp by reference (int& hp)
+bool\s+tryBuy\s*\(\s*int\s*& || tryBuy must take gold by reference (int& gold)

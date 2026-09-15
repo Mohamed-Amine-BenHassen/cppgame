@@ -1,0 +1,4 @@
+class\s+Hero || declare a class called Hero
+private\s*: || keep the data private - that is the whole idea
+Hero\s*\(\s*std::string || write a constructor that takes a name and a max hp
+\)\s*const || mark the read-only methods const

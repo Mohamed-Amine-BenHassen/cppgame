@@ -1,0 +1,7 @@
+class\s+Goblin\s*:\s*public\s+Monster || Goblin must inherit from Monster
+class\s+Ogre\s*:\s*public\s+Monster || Ogre must inherit from Monster
+class\s+Wraith\s*:\s*public\s+Monster || Wraith must inherit from Monster
+virtual\s+~Monster || the base destructor must be virtual, or deleting through a Monster* is undefined behaviour
+override || mark the replaced methods with override so the compiler can check them
+vector\s*<\s*Monster\s*\*\s*> || keep the horde in a std::vector<Monster*>
+delete\s+ || every new needs a delete - clean the horde up at the end

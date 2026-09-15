@@ -1,0 +1,15 @@
+{
+  "title": "Many Shapes of Monster",
+  "act": "ACT IV - The Architect",
+  "tagline": "the fourth boss - one loop, three kinds of enemy",
+  "xp": 170,
+  "boss": true,
+  "concepts": ["inheritance", "virtual", "override", "base pointers", "virtual destructor"],
+  "hints": [
+    "`class Goblin : public Monster` means a Goblin IS a Monster and gets everything Monster has.",
+    "A derived constructor passes up to the base with an initialiser list: `Goblin() : Monster(\"goblin\", 12) {}` - the colon goes between the parentheses and the body.",
+    "`virtual` in the base means 'the derived class may replace this'. `override` in the derived means 'I am replacing something' - and the compiler checks you spelled it right.",
+    "Wraith deliberately does NOT override attackRoll. Leave it out and it inherits the base version, which is roll(4). That is inheritance doing its job.",
+    "`m->cry()` is the dot for pointers. Every `new` you write needs exactly one `delete`, and the delete loop goes at the very end of main."
+  ]
+}

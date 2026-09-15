@@ -1,0 +1,15 @@
+{
+  "title": "The Save Stone",
+  "act": "ACT V - The Deep Craft",
+  "tagline": "a game that survives being closed",
+  "xp": 120,
+  "boss": false,
+  "concepts": ["ofstream", "ifstream", "file formats", "checking failure"],
+  "hints": [
+    "`#include <fstream>`. Writing: `std::ofstream out(\"save.txt\");` then `out << ...` exactly like std::cout.",
+    "Reading: `std::ifstream in(\"save.txt\");` then `in >> hp >> maxHp;` exactly like std::cin.",
+    "`if (!in)` is how you ask whether the file opened. A missing file is not a crash - it is a stream that reports failure, and you must check.",
+    "Mixing `>>` and `getline` on a file has the SAME leftover-newline problem as std::cin. After reading the item count with `>>`, call `in.ignore(10000, '\n');` before your getline loop.",
+    "The streams close themselves when they go out of scope. That is RAII, and floor 20 is about why it matters."
+  ]
+}

@@ -1,0 +1,2 @@
+isWall || ask the dungeon whether the target square is a wall
+while\s*\(\s*std::getline || drive the game from a getline loop

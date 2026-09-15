@@ -1,0 +1,13 @@
+{
+  "title": "Hello, Adventurer",
+  "act": "ACT I - The Foundation",
+  "tagline": "make the machine speak",
+  "xp": 40,
+  "boss": false,
+  "concepts": ["#include", "main", "std::cout", "<<", "newline"],
+  "hints": [
+    "Every line you print goes through `std::cout <<`. You can chain as many `<<` as you like on one statement.",
+    "`\n` inside a string literal means 'newline'. So `std::cout << \"hi\n\";` prints hi and then moves to the next line.",
+    "You need four printed lines. That can be four separate `std::cout` statements, or one big chain - both are correct."
+  ]
+}

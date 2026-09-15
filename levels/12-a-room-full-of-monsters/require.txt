@@ -1,0 +1,2 @@
+vector\s*<\s*Monster\s*> || hold the room in a std::vector<Monster>
+Monster\s*&\s*\w+\s*: || sweep the room with a reference (Monster& m : room), or the damage lands on a copy

@@ -1,0 +1,15 @@
+{
+  "title": "The Parser's Tongue",
+  "act": "ACT IV - The Architect",
+  "tagline": "turn what the player typed into what the game does",
+  "xp": 100,
+  "boss": false,
+  "concepts": ["std::string", "find", "substr", "npos", "cin/getline pitfall"],
+  "hints": [
+    "`size_t space = line.find(' ');` gives you the position of the first space, or `std::string::npos` when there is none.",
+    "When there IS no space the whole line is the verb and the rest is empty. When there is one: `verb = line.substr(0, space);` and `rest = line.substr(space + 1);`",
+    "`substr(start)` runs to the end of the string. `substr(start, count)` takes count characters. Getting these two mixed up is most of what goes wrong with strings.",
+    "Order your checks: empty line first, then look, then go, then take, then the catch-all. And test the `rest.empty()` case inside go and take before using it.",
+    "The loop is `while (std::getline(std::cin, line))`, with `if (line == \"quit\") break;` as the first thing inside."
+  ]
+}

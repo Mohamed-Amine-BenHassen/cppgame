@@ -1,0 +1,9 @@
+-- the ogre blocks the stair --
+ogre [##########] 30/30
+round 1: you deal 7
+ogre [#######...] 23/30
+round 2: you deal 6
+ogre [#####.....] 17/30
+round 3: you deal 7
+ogre [###.......] 10/30
+the ogre still stands

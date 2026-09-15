@@ -1,0 +1,14 @@
+{
+  "title": "The Dice Tower",
+  "act": "ACT II - The Loops",
+  "tagline": "for loops, and dice that lie the same way twice",
+  "xp": 60,
+  "boss": false,
+  "concepts": ["for", "modulo", "pseudo-random", "accumulation"],
+  "hints": [
+    "`for (int i = 1; i <= 10; ++i) { ... }` packs the three parts of a while loop onto one line: set up, test, step.",
+    "Declare `hits` and `total` BEFORE the for loop. Anything declared inside is destroyed at the closing brace.",
+    "Call `roll(6)` exactly once per pass and store it: `int r = roll(6);`. If you call it twice you get two different numbers and your log will not match your total.",
+    "`if (r >= 4) { ++hits; }` and `total += r;` both go inside the same loop body, after the roll."
+  ]
+}

@@ -1,0 +1,2 @@
+break\s*; || use break to stop a dead goblin swinging back
+while\s*\(|for\s*\( || the fight has to be a loop

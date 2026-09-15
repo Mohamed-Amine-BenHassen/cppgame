@@ -1,0 +1,14 @@
+-- ROOM (3 monsters) --
+slime  hp 2  atk 1
+slime  hp 2  atk 1
+slime  hp 2  atk 1
+total threat: 3
+toughest: slime
+-- you sweep the room --
+you hit slime for 7 (hp 0)
+  slime dies
+you hit slime for 6 (hp 0)
+  slime dies
+you hit slime for 7 (hp 0)
+  slime dies
+still standing: 0

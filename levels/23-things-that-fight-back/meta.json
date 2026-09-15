@@ -1,0 +1,15 @@
+{
+  "title": "Things That Fight Back",
+  "act": "ACT VI - Your Own Game",
+  "tagline": "monsters, combat, and a game that can kill you",
+  "xp": 170,
+  "boss": false,
+  "concepts": ["composition", "unique_ptr ownership", "polymorphism in a real loop", "returning nullptr"],
+  "hints": [
+    "`monsterAt` walks monsters_ and returns `m.get()` for the first LIVING one on that square, or `nullptr` if there is none. `.get()` borrows the raw pointer without giving away ownership.",
+    "`step` decides between two actions: if `monsterAt(nx, ny)` gave you something, attack it and do NOT move. Otherwise check the wall, then move.",
+    "Adjacency is `(abs(dx) + abs(dy)) == 1` - orthogonal only, and not the square the player is standing on. `#include <cstdlib>` for abs.",
+    "Order inside a turn: the player acts, then monstersAct() runs, then draw(). Keep that order or your dice will not match.",
+    "In draw(), build each row from `dungeon_.tileAt(x, y)`, then overwrite with any living monster's glyph, then overwrite with '@'. Player on top, always."
+  ]
+}

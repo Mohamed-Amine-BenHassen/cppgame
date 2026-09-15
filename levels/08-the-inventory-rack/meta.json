@@ -1,0 +1,15 @@
+{
+  "title": "The Inventory Rack",
+  "act": "ACT II - The Loops",
+  "tagline": "the second boss - many things under one name",
+  "xp": 120,
+  "boss": true,
+  "concepts": ["std::vector", "push_back", "size", "indexing", "range-for"],
+  "hints": [
+    "`std::vector<std::string> pack;` starts empty. `pack.push_back(item);` adds one to the end. `pack.size()` says how many.",
+    "Read with `while (std::getline(std::cin, line))` and `if (line == \"done\") break;` inside. getline gives you the whole line, spaces and all.",
+    "To print numbered items you need the index, so use a counting loop: `for (size_t i = 0; i < pack.size(); ++i)` and print `i + 1` as the human number.",
+    "To search, walk the vector with a range-for and set a bool: `for (const std::string& item : pack) { if (item == \"torch\") hasTorch = true; }`",
+    "`pack.back()` is the last element - but it crashes on an empty vector, which is exactly why the empty case is handled separately and returns early."
+  ]
+}

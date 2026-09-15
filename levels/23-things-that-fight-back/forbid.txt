@@ -1,0 +1,1 @@
+\bdelete\b || no manual delete - unique_ptr owns the monsters now

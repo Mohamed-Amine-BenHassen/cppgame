@@ -1,0 +1,2 @@
+getline || read the name with std::getline so spaces survive
+cin\s*>> || read the level number with std::cin >>

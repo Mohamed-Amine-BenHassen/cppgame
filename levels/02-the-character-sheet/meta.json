@@ -1,0 +1,14 @@
+{
+  "title": "The Character Sheet",
+  "act": "ACT I - The Foundation",
+  "tagline": "boxes that hold numbers",
+  "xp": 50,
+  "boss": false,
+  "concepts": ["int", "double", "char", "bool", "std::string", "arithmetic"],
+  "hints": [
+    "A variable is `type name = value;` - for example `int gold = 25;`. The type is a promise about what kind of thing lives in that box.",
+    "You are told the STARTING values, not the final ones. `gold` starts at 25 and then 17 is found: write `gold = gold + 17;` (or the shorthand `gold += 17;`).",
+    "For text you need `#include <string>` and `std::string name = \"Kaelen\";`. For a single character it is `char` with SINGLE quotes: `char rank = 'R';`.",
+    "`std::cout << alive` on a bool prints `1` for true and `0` for false. That is not a bug - that is what a bool is underneath."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "title": "The Locked Door",
+  "act": "ACT IV - The Architect",
+  "tagline": "const, and the promises a class keeps",
+  "xp": 110,
+  "boss": false,
+  "concepts": ["invariants", "const methods", "const&", "returning bool for failure"],
+  "hints": [
+    "`Pack(size_t capacity)` only needs to store the capacity - the vector starts empty on its own.",
+    "`add` must check `full()` FIRST and return false without touching the vector. A method that half-succeeds is worse than one that refuses.",
+    "`drop` needs a hand-written search: walk the vector by index, and when `items_[i] == item`, erase it with `items_.erase(items_.begin() + i);` then `return true;` immediately.",
+    "`list()` returns a string. Join with `, ` BETWEEN items - the usual trick is `if (i > 0) out += \", \";` before appending item i.",
+    "`report` takes a `const Pack&`, so every method it calls must be const. If the compiler complains about that, you have found a method missing its const - that is the floor working as intended."
+  ]
+}

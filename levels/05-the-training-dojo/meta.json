@@ -1,0 +1,14 @@
+{
+  "title": "The Training Dojo",
+  "act": "ACT II - The Loops",
+  "tagline": "make the machine repeat itself",
+  "xp": 60,
+  "boss": false,
+  "concepts": ["while", "counters", "+=", "++", "accumulation"],
+  "hints": [
+    "The shape is: something before the loop that the condition looks at, and something inside the loop that changes it. `while (level < 5) { ... }` needs `level` to grow inside, or it never stops.",
+    "Count the sessions with a variable you declare BEFORE the loop and `++` at the top of each pass. If you declare it inside, it is reborn every time.",
+    "The level-up is an `if` INSIDE the while loop, checked after adding xp: `if (xp >= 100) { xp -= 100; ++level; ... }`.",
+    "Subtract 100, do not reset to 0 - the leftover xp carries over. That is why the totals after a level-up are 20, then 10, then 0, then 20."
+  ]
+}
