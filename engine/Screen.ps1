@@ -12,22 +12,28 @@ $script:Rows     = New-Object System.Collections.ArrayList
 $script:Scripted = $false
 $script:FrameNo  = 0
 
+# `e is only understood as ESC by PowerShell 6+. On Windows PowerShell 5.1
+# (the fallback play.cmd uses when pwsh isn't installed) it silently drops
+# the backtick and leaves a literal "e", corrupting every frame. Build the
+# escape character explicitly so both versions render identically.
+$script:Esc = [char]27
+
 $script:Ansi = @{
-    reset   = "`e[0m"
-    dim     = "`e[38;5;242m"
-    gray    = "`e[38;5;250m"
-    white   = "`e[97m"
-    cyan    = "`e[38;5;44m"
-    deep    = "`e[38;5;30m"
-    blue    = "`e[38;5;68m"
-    green   = "`e[38;5;77m"
-    lime    = "`e[38;5;155m"
-    yellow  = "`e[38;5;221m"
-    gold    = "`e[38;5;179m"
-    orange  = "`e[38;5;209m"
-    red     = "`e[38;5;203m"
-    magenta = "`e[38;5;176m"
-    purple  = "`e[38;5;141m"
+    reset   = "$($script:Esc)[0m"
+    dim     = "$($script:Esc)[38;5;242m"
+    gray    = "$($script:Esc)[38;5;250m"
+    white   = "$($script:Esc)[97m"
+    cyan    = "$($script:Esc)[38;5;44m"
+    deep    = "$($script:Esc)[38;5;30m"
+    blue    = "$($script:Esc)[38;5;68m"
+    green   = "$($script:Esc)[38;5;77m"
+    lime    = "$($script:Esc)[38;5;155m"
+    yellow  = "$($script:Esc)[38;5;221m"
+    gold    = "$($script:Esc)[38;5;179m"
+    orange  = "$($script:Esc)[38;5;209m"
+    red     = "$($script:Esc)[38;5;203m"
+    magenta = "$($script:Esc)[38;5;176m"
+    purple  = "$($script:Esc)[38;5;141m"
 }
 
 function Initialize-Screen {
@@ -135,13 +141,13 @@ function Show-Frame {
         Write-Output ("=== frame $($script:FrameNo) " + ('=' * 40))
         foreach ($row in $script:Rows) {
             $r = Get-RowText $row
-            Write-Output ($r.Text -replace "`e\[[0-9;]*m", '')
+            Write-Output ($r.Text -replace "$($script:Esc)\[[0-9;]*m", '')
         }
         return
     }
 
     $sb = [System.Text.StringBuilder]::new()
-    [void]$sb.Append("`e[H")                    # cursor to top-left
+    [void]$sb.Append("$($script:Esc)[H")         # cursor to top-left
 
     $count = [Math]::Min($script:Rows.Count, $script:ScreenH)
     for ($i = 0; $i -lt $count; $i++) {
@@ -159,5 +165,5 @@ function Show-Frame {
 
 function Clear-Screen {
     if ($script:Scripted) { return }
-    [Console]::Write("`e[2J`e[H")
+    [Console]::Write("$($script:Esc)[2J$($script:Esc)[H")
 }
