@@ -5,6 +5,9 @@
  * else is an overlay. Mirrors the desktop state machine in
  * engine/Adventure.ps1 - tower, lesson, trial, victory, ending.
  */
+// Bundled, not fetched: the tower has to look right on a plane too.
+import '@fontsource-variable/geist';
+import '@fontsource-variable/geist-mono';
 import bundle from './content/levels.json';
 import { createWorkerBackend } from './toolchain/worker-host.js';
 import { runTrial, strikeLog, guardianFor } from './grader/trial.js';
@@ -52,7 +55,7 @@ function toTower() {
   current = null;
   closeOverlay();
   document.body.dataset.screen = 'tower';
-  els.title.textContent = 'TOWER OF TURING';
+  els.title.textContent = 'Tower of Turing';
   els.status.textContent = `${progress.completed.length}/${bundle.levelCount} floors`;
   renderTower({ mount: els.tower, bundle, progress, onEnter: enterFloor });
   els.tower.scrollTop = 0;
@@ -101,7 +104,7 @@ function showGuardian(level, passed = 0) {
   els.art.textContent = g.art.join('\n');
   els.art.style.color = g.color === 'magenta' ? 'var(--magenta)' : 'var(--cyan)';
   els.hp.textContent = `${g.name}  ${left}/${hp}`;
-  els.bar.style.width = `${hp ? (left / hp) * 100 : 0}%`;
+  els.bar.style.setProperty('--fill', hp ? left / hp : 0);
   els.bar.style.background = left === 0 ? 'var(--lime)' : 'var(--red)';
 }
 

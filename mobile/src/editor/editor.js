@@ -20,42 +20,42 @@ import { defaultKeymap, history, historyKeymap, indentWithTab } from '@codemirro
 import { syntaxHighlighting, HighlightStyle, indentUnit, bracketMatching } from '@codemirror/language';
 import { tags as t } from '@lezer/highlight';
 
-/* The palette is the terminal game's, so both versions look like one game.
- * Values mirror the ANSI table in engine/Screen.ps1:18-32. */
+/* The hues are the terminal game's (engine/Screen.ps1:18-32), so both
+ * versions still read as one game; the surfaces match index.html. */
 const theme = EditorView.theme({
-  '&': { color: '#c8d3e4', backgroundColor: '#161b25', height: '100%' },
+  '&': { color: '#dfe4ee', backgroundColor: 'transparent', height: '100%' },
   '.cm-content': {
-    caretColor: '#35c7d4',
-    fontFamily: 'ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace',
+    caretColor: '#5ee6f0',
+    fontFamily: '"Geist Mono Variable", ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace',
     fontSize: '13px',
-    lineHeight: '1.6',
-    padding: '10px 0',
+    lineHeight: '1.7',
+    padding: '16px 0',
     /* No ligatures. Cascadia and friends draw <= as a single glyph and -> as
      * an arrow; in a game teaching exact C++ syntax that is a lie about what
      * the player typed, and what they have to type. */
     fontVariantLigatures: 'none',
   },
-  '.cm-cursor, .cm-dropCursor': { borderLeftColor: '#35c7d4', borderLeftWidth: '2px' },
+  '.cm-cursor, .cm-dropCursor': { borderLeftColor: '#5ee6f0', borderLeftWidth: '2px' },
   '&.cm-focused .cm-selectionBackground, .cm-selectionBackground, ::selection':
-    { backgroundColor: '#2b3f52' },
-  '.cm-gutters': { backgroundColor: '#10131a', color: '#46506a', border: 'none' },
-  '.cm-activeLine': { backgroundColor: '#1b2230' },
-  '.cm-activeLineGutter': { backgroundColor: '#1b2230', color: '#6b7890' },
+    { backgroundColor: 'rgba(94, 230, 240, .18)' },
+  '.cm-gutters': { backgroundColor: 'transparent', color: 'rgba(238, 240, 244, .2)', border: 'none', paddingLeft: '8px' },
+  '.cm-activeLine': { backgroundColor: 'rgba(255, 255, 255, .03)' },
+  '.cm-activeLineGutter': { backgroundColor: 'transparent', color: 'rgba(238, 240, 244, .55)' },
   '.cm-matchingBracket, &.cm-focused .cm-matchingBracket':
-    { backgroundColor: '#2f4a4d', color: '#a6ecf2', outline: 'none' },
+    { backgroundColor: 'rgba(94, 230, 240, .14)', color: '#bdf6fa', outline: 'none' },
   '.cm-scroller': { overflow: 'auto' },
 }, { dark: true });
 
 const highlight = HighlightStyle.define([
-  { tag: [t.keyword, t.modifier, t.controlKeyword], color: '#b98ad4' },
-  { tag: [t.typeName, t.className, t.standard(t.typeName)], color: '#35c7d4' },
-  { tag: [t.function(t.variableName), t.function(t.propertyName)], color: '#96d45c' },
-  { tag: [t.string, t.special(t.string)], color: '#d9b45c' },
-  { tag: [t.number, t.bool, t.null], color: '#e2a05f' },
+  { tag: [t.keyword, t.modifier, t.controlKeyword], color: '#b896f0' },
+  { tag: [t.typeName, t.className, t.standard(t.typeName)], color: '#5ee6f0' },
+  { tag: [t.function(t.variableName), t.function(t.propertyName)], color: '#a6e070' },
+  { tag: [t.string, t.special(t.string)], color: '#e8c46a' },
+  { tag: [t.number, t.bool, t.null], color: '#f0aa6a' },
   { tag: [t.comment, t.lineComment, t.blockComment], color: '#5c6880', fontStyle: 'italic' },
   { tag: [t.meta, t.processingInstruction], color: '#6fb3c4' },
   { tag: [t.operator, t.punctuation, t.separator], color: '#8c9ab5' },
-  { tag: t.variableName, color: '#c8d3e4' },
+  { tag: t.variableName, color: '#dfe4ee' },
 ]);
 
 /* Every one of these is awkward on an on-screen keyboard and constant in C++.

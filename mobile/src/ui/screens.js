@@ -37,11 +37,12 @@ export function renderTower({ mount, bundle, progress, onEnter }) {
   const rank = rankFor(progress.xp);
   const next = nextRank(progress.xp);
 
+  head.append(el('span', 'eyebrow', 'your rank'));
   head.append(el('div', 'rank', rank));
   const xpLine = el('div', 'xpline');
   const bar = el('span', 'bar');
   const fill = el('i');
-  fill.style.width = `${(progress.xp / bundle.totalXp) * 100}%`;
+  fill.style.setProperty('--fill', progress.xp / bundle.totalXp);
   bar.append(fill);
   xpLine.append(el('span', 'xp', `${progress.xp} / ${bundle.totalXp} XP`), bar);
   head.append(xpLine);
@@ -51,11 +52,15 @@ export function renderTower({ mount, bundle, progress, onEnter }) {
   mount.append(head);
 
   // --- floors, grouped by act, exactly as the map does
+  // --i staggers the entrance, so the floors rise in order like a climb.
   let act = null;
+  let step = 0;
   levels.forEach((level, i) => {
     if (level.act !== act) {
       act = level.act;
-      mount.append(el('h2', 'act', act));
+      const h = el('h2', 'act', act);
+      h.style.setProperty('--i', step++);
+      mount.append(h);
     }
 
     const done = isDone(progress, level);
@@ -64,6 +69,7 @@ export function renderTower({ mount, bundle, progress, onEnter }) {
 
     const row = el('button', `floor${done ? ' done' : ''}${current ? ' current' : ''}${open ? '' : ' sealed'}`);
     row.type = 'button';
+    row.style.setProperty('--i', step++);
 
     row.append(el('span', 'mark', done ? '✓' : open ? '›' : '·'));
     row.append(el('span', 'num', String(level.number).padStart(2, '0')));
@@ -213,7 +219,7 @@ export function showVictory({ level, award, bundle, onNext, onTower }) {
 
     const bar = el('span', 'bar');
     const fill = el('i');
-    fill.style.width = `${(award.oldXp / bundle.totalXp) * 100}%`;
+    fill.style.setProperty('--fill', award.oldXp / bundle.totalXp);
     bar.append(fill);
     body.append(bar);
 
@@ -238,7 +244,7 @@ export function showVictory({ level, award, bundle, onNext, onTower }) {
         s++;
         const shown = Math.round(award.oldXp + (award.newXp - award.oldXp) * (s / steps));
         xpEl.textContent = `${shown} XP`;
-        fill.style.width = `${(shown / bundle.totalXp) * 100}%`;
+        fill.style.setProperty('--fill', shown / bundle.totalXp);
         if (s < steps) requestAnimationFrame(tick);
       };
       requestAnimationFrame(tick);
